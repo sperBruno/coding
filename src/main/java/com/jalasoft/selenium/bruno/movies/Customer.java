@@ -19,7 +19,7 @@ class Customer {
      *
      * @param name of customer.
      */
-    public Customer(final String name) {
+    Customer(final String name) {
         customerName = name;
     }
 
