@@ -1,5 +1,9 @@
 package com.jalasoft.selenium.bruno.shape;
 
+import java.text.DecimalFormat;
+
+import static java.lang.Double.*;
+
 /**
  * This class represents a Rectangle.
  * Created by Bruno Barrios on 3/3/2017.
@@ -7,7 +11,7 @@ package com.jalasoft.selenium.bruno.shape;
 public class Rectangle implements Shape {
     protected final int base;
     protected final int altura;
-
+    public static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
     /**
      * This the constructor of a Rectangle.
      *
@@ -24,8 +28,9 @@ public class Rectangle implements Shape {
      *
      * @return area
      */
+    @Override
     public double calculateArea() {
-        return this.base * this.altura;
+        return parseDouble(DECIMAL_FORMAT.format(this.base * this.altura));
     }
 
     /**
@@ -33,7 +38,8 @@ public class Rectangle implements Shape {
      *
      * @return perimeter
      */
+    @Override
     public double calculatePerimeter() {
-        return 2 * (this.base * this.altura);
+        return parseDouble(DECIMAL_FORMAT.format(2 * (this.base * this.altura)));
     }
 }

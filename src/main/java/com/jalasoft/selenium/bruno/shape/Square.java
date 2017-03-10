@@ -21,7 +21,7 @@ public class Square extends Rectangle {
      */
     @Override
     public double calculatePerimeter() {
-        return 2 * (double) (this.altura + this.base);
+        return Double.parseDouble(DECIMAL_FORMAT.format(2 * (double) (this.altura + this.base)));
     }
 
 

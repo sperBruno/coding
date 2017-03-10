@@ -1,26 +1,24 @@
-package com.jalasoft.selenium.bruno.movies;
+package com.jalasoft.selenium.bruno.shape;
 
-import com.jalasoft.selenium.bruno.shape.Rectangle;
-import com.jalasoft.selenium.bruno.shape.Shape;
 import org.junit.Test;
-
-import static com.jalasoft.selenium.bruno.movies.RectangleTest.FIVE;
-import static com.jalasoft.selenium.bruno.movies.RectangleTest.SIX;
-import static com.jalasoft.selenium.bruno.movies.RectangleTest.ONE;
-import static com.jalasoft.selenium.bruno.movies.RectangleTest.DELTA;
 
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Bruno Barrios on 3/6/2017.
  */
-public class SquareTest {
+public class RectangleTest {
 
+    public static final double DELTA = 0;
+    public static final int TWO = 2;
+    public static final int FIVE = 5;
+    public static final int SIX = 6;
+    public static final int ONE = 1;
 
     private Shape rectangle;
 
     /**
-     * This test verifies if square area is 30.
+     * This method verifies if rectangle area is 30.
      */
     @Test
     public void tetsCalculateAreaWhen() {
@@ -38,7 +36,7 @@ public class SquareTest {
     }
 
     /**
-     * This test verifies if square perimeter is 30.
+     * This method verifies if rectangle perimeter is 6.0.
      */
     @Test
     public void testCalculatePerimeterWhen() {
@@ -48,9 +46,23 @@ public class SquareTest {
 
         //When
         final double actualPerimeter = rectangle.calculateArea();
-        final double expectePerimeter = 30;
+        final double expectePerimeter = 6.0;
 
         //then
         assertEquals(expectePerimeter, actualPerimeter, DELTA);
     }
+
+    /**
+     * This method verifies if rectangle area is 0.
+     */
+    @Test
+    public void testCalculateAreaWhen() {
+        rectangle = new Rectangle(-TWO, 0);
+
+        final int actualResult = 0;
+        final int expectedResult = 0;
+
+        assertEquals(expectedResult, actualResult, DELTA);
+    }
+
 }

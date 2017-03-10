@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.shape;
 
+import static com.jalasoft.selenium.bruno.shape.Rectangle.DECIMAL_FORMAT;
 import static java.lang.Math.PI;
 
 /**
@@ -21,15 +22,17 @@ public class Circle implements Shape {
      * Calculate Circle area.
      * @return circle area
      */
+    @Override
     public double calculateArea() {
-        return PI * Math.pow(ratio, 2);
+        return Double.parseDouble(DECIMAL_FORMAT.format(PI * Math.pow(ratio, 2)));
     }
 
     /**
      * Calculate circle perimeter.
      * @return circle perimeter
      */
+    @Override
     public double calculatePerimeter() {
-        return PI * Math.pow(ratio, 2);
+        return Double.parseDouble(DECIMAL_FORMAT.format(PI * Math.pow(ratio, 2)));
     }
 }

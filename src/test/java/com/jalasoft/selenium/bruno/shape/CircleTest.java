@@ -1,7 +1,5 @@
-package com.jalasoft.selenium.bruno.movies;
+package com.jalasoft.selenium.bruno.shape;
 
-import com.jalasoft.selenium.bruno.shape.Circle;
-import com.jalasoft.selenium.bruno.shape.Shape;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,11 +22,11 @@ public class CircleTest {
     public void setUp() {
         //Given
         final int ratio = 5;
-        Shape circle = new Circle(ratio);
+        circle = new Circle(ratio);
     }
 
     /**
-     * This test verifies if an area is 10.
+     * This test verifies if an area is 78.54.
      */
     @Test
     public void testCalculateAreaWhen() {
@@ -37,12 +35,12 @@ public class CircleTest {
         final double actualArea = circle.calculateArea();
 
         //then
-        final double expectedArea = 10;
+        final double expectedArea = 78.54;
         assertEquals(expectedArea, actualArea, DELTA);
     }
 
     /**
-     * This test verifies if a perimeter is 10.
+     * This test verifies if a perimeter is 78.54.
      */
     @Test
     public void testCalculatePerimeterWhen() {
@@ -51,7 +49,7 @@ public class CircleTest {
         final double actualPerimeter = circle.calculateArea();
 
         //then
-        final double expectedPerimeter = 10;
+        final double expectedPerimeter = 78.54;
         assertEquals(expectedPerimeter, actualPerimeter, DELTA);
     }
 
