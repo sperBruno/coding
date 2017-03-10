@@ -2,7 +2,7 @@ package com.jalasoft.selenium.bruno.shape;
 
 import java.text.DecimalFormat;
 
-import static java.lang.Double.*;
+import static java.lang.Double.parseDouble;
 
 /**
  * This class represents a Rectangle.
