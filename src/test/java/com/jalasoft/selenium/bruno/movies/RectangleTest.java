@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.movies;
 
+import com.jalasoft.selenium.bruno.shape.Rectangle;
 import com.jalasoft.selenium.bruno.shape.Shape;
 import org.junit.Test;
 

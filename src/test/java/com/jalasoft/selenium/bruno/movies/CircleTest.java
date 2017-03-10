@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.movies;
 
+import com.jalasoft.selenium.bruno.shape.Circle;
 import com.jalasoft.selenium.bruno.shape.Shape;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,11 +8,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
+ * This a test for Circle.
  * Created by Bruno Barrios on 3/3/2017.
  */
 public class CircleTest {
 
-    public static final int DELTA = 0;
+    private static final int DELTA = 0;
 
     private Shape circle;
 

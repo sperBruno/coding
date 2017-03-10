@@ -5,8 +5,17 @@ package com.jalasoft.selenium.bruno.shape;
  */
 public interface Shape {
 
+    /**
+     * interface calculate area.
+     * @return area
+     */
     double calculateArea();
 
+
+    /**
+     * interface calcualte parameter.
+     * @return perimeter
+     */
     double calculatePerimeter();
 
 }
