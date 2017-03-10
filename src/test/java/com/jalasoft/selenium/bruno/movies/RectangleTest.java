@@ -11,15 +11,22 @@ import static org.junit.Assert.assertEquals;
  */
 public class RectangleTest {
 
-    public static double DELTA = 0;
+    public static final double DELTA = 0;
+    public static final int TWO = 2;
+    public static final int FIVE = 5;
+    public static final int SIX = 6;
+    public static final int ONE = 1;
 
     private Shape rectangle;
 
+    /**
+     * This method verifies if rectangle area is 30.
+     */
     @Test
     public void tetsCalculateAreaWhen() {
 
         //Given
-        rectangle = new Rectangle(5, 6);
+        rectangle = new Rectangle(FIVE, SIX);
 
         //When
         final double actualArea = rectangle.calculateArea();
@@ -30,11 +37,14 @@ public class RectangleTest {
         assertEquals(expectedArea, actualArea, DELTA);
     }
 
+    /**
+     * This method verifies if rectangle perimeter is 30.
+     */
     @Test
     public void testCalculatePerimeterWhen() {
 
         //Given
-        rectangle = new Rectangle(1, 6);
+        rectangle = new Rectangle(ONE, SIX);
 
         //When
         final double actualPerimeter = rectangle.calculateArea();
@@ -44,9 +54,12 @@ public class RectangleTest {
         assertEquals(expectePerimeter, actualPerimeter, DELTA);
     }
 
+    /**
+     * This method verifies if rectangle area is 0.
+     */
     @Test
     public void testCalculateAreaWhen() {
-        rectangle = new Rectangle(-2, 0);
+        rectangle = new Rectangle(-TWO, 0);
 
         final int actualResult = 0;
         final int expectedResult = 0;

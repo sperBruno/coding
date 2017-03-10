@@ -17,6 +17,9 @@ public class CircleTest {
 
     private Shape circle;
 
+    /**
+     * This is a setup for circle tests.
+     */
     @Before
     public void setUp() {
         //Given
@@ -24,8 +27,11 @@ public class CircleTest {
         Shape circle = new Circle(ratio);
     }
 
+    /**
+     * This test verifies if an area is 10.
+     */
     @Test
-    public void tetstCalculateAreaWhen() {
+    public void testCalculateAreaWhen() {
 
         //When
         final double actualArea = circle.calculateArea();
@@ -35,9 +41,11 @@ public class CircleTest {
         assertEquals(expectedArea, actualArea, DELTA);
     }
 
+    /**
+     * This test verifies if a perimeter is 10.
+     */
     @Test
     public void testCalculatePerimeterWhen() {
-
 
         //When
         final double actualPerimeter = circle.calculateArea();
@@ -47,6 +55,9 @@ public class CircleTest {
         assertEquals(expectedPerimeter, actualPerimeter, DELTA);
     }
 
+    /**
+     * This test verifies if circle area is 0.
+     */
     @Test
     public void testCalculateAreaWhenRatioIsCero() {
         //Given
@@ -60,9 +71,11 @@ public class CircleTest {
 
     }
 
+    /**
+     * This test verifies of a circle perimeter is cero.
+     */
     @Test
-    public void test_calculatePerimeter_WhenPerimeterIsCero() {
-
+    public void testCalculatePerimeterWhenPerimeterIsCero() {
         circle = new Circle(0);
         final int expectedPerimeter = 0;
         final double actualPerimeter = circle.calculatePerimeter();
