@@ -73,7 +73,7 @@ class Customer {
      * @param rentals              made by customer.
      * @return the frequent renter points.
      */
-    private int getFrequentRenterPoints(final int frequentRenterPoints, final Rental rentals) {
+    public int getFrequentRenterPoints(final int frequentRenterPoints, final Rental rentals) {
         int count = frequentRenterPoints;
         count++;
         if ((rentals.getMovie().getPriceCode() == NEW_RELEASE)
@@ -84,5 +84,12 @@ class Customer {
         return count;
     }
 
+    /**
+     * this method will be used to get rentals list.
+     * @return rentals list.
+     */
+    public List<Rental> getRentalList() {
+        return rentalList;
+    }
 
 }

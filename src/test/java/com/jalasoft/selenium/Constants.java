@@ -6,6 +6,7 @@ package com.jalasoft.selenium;
 public final class Constants {
     public static final  int EXPLICIT_WAIT = 30;
     public static final  int IMPLICIT_WAIT = 15;
+    public static final  int DELTA = 0;
 
     /**
      * Default constructor.
