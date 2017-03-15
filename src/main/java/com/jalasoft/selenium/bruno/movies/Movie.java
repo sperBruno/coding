@@ -25,7 +25,7 @@ public abstract class Movie {
      * @param daysRented of a movie.
      * @return the amount.
      */
-    public abstract double calculateMovieAmount(final int daysRented);
+    public abstract double calculateMovieAmount(int daysRented);
 
     /**
      * This method gets the movie's price code.
