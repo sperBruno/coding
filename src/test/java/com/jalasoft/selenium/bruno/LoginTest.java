@@ -36,7 +36,7 @@ public class LoginTest {
         wait.until(ExpectedConditions.elementToBeClickable(username)).sendKeys("kaos_bruno@hotmail.es");
 
         WebElement password = driver.findElement(By.cssSelector("#password"));
-        wait.until(ExpectedConditions.elementToBeClickable(password)).sendKeys("74139807Bbv");
+        wait.until(ExpectedConditions.elementToBeClickable(password)).sendKeys("");
 
 
         WebElement loginBtn = driver.findElement(By.cssSelector("#Login"));
