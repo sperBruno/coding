@@ -9,8 +9,8 @@ import static java.lang.Double.parseDouble;
  * Created by Bruno Barrios on 3/3/2017.
  */
 public class Rectangle implements Shape {
-    protected final int base;
-    protected final int altura;
+    protected final double base;
+    protected final double altura;
     public static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
     /**
      * This the constructor of a Rectangle.
@@ -18,7 +18,7 @@ public class Rectangle implements Shape {
      * @param sideA of a rectangle.
      * @param sideB of a rectangle.
      */
-    public Rectangle(final int sideA, final int sideB) {
+    public Rectangle(final double sideA, final double sideB) {
         this.base = sideA;
         this.altura = sideB;
     }

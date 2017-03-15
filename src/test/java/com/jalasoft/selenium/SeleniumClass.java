@@ -5,17 +5,24 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+
+import java.util.concurrent.TimeUnit;
+
+import static com.jalasoft.selenium.Constants.IMPLICIT_WAIT;
 
 /**
  * Created by Bruno Barrios on 3/10/2017.
  */
 public class SeleniumClass {
 
+    /**
+     * This is a Login example.
+     */
     @Test
-    public void firstTest(){
+    public void firstTest() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         driver.get("http://only-testing-blog.blogspot.in/2013/09/test.html");
 
         driver.manage().window().maximize();
@@ -29,16 +36,10 @@ public class SeleniumClass {
         WebElement bikeCheckBox = driver.findElement(By.cssSelector("input[value='Bike']"));
 
         //select checkbox
-        if (!bikeCheckBox.isSelected()){
+        if (!bikeCheckBox.isSelected()) {
             bikeCheckBox.click();
         }
-
-        Select selectBox = new Select(driver.findElement(By.xpath("//select")));
-        selectBox.selectByValue("USA");
-
-
         driver.close();
-
     }
 
 }
