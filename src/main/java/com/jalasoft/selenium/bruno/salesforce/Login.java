@@ -1,4 +1,4 @@
-package com.jalasoft.selenium.bruno.saleforce;
+package com.jalasoft.selenium.bruno.salesforce;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

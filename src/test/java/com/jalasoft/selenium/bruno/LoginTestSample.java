@@ -18,7 +18,7 @@ import static com.jalasoft.selenium.Constants.IMPLICIT_WAIT;
 /**
  * Created by Bruno Barrios on 3/13/2017.
  */
-public class LoginTest {
+public class LoginTestSample {
     /**
      * This is a UI test for login to Salesforce.
      */

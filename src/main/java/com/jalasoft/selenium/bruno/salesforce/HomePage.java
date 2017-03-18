@@ -1,4 +1,4 @@
-package com.jalasoft.selenium.bruno.saleforce;
+package com.jalasoft.selenium.bruno.salesforce;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,8 @@ public class HomePage {
     private WebDriver driver;
     private final WebDriverWait wait;
     private By profileIcon = By.cssSelector(".profileTrigger");
-    private By profileNameText = By.cssSelector(".profile-card-name .profile-link-label");
+    private By profileNameText = By.cssSelector(".active.oneContent div[title='New']");
+    private By oportunitiesOption = By.cssSelector("a[title='Oportunidades'");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -24,9 +25,12 @@ public class HomePage {
         driver.findElement(profileIcon).click();
     }
 
-    public String getProfileNaem() {
+    public String getProfileName() {
         return driver.findElement(profileNameText).getText();
     }
 
-
+    public Oportunities clickOportunitiesOption() {
+        driver.findElement(oportunitiesOption).click();
+        return new Oportunities(driver);
+    }
 }
