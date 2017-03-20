@@ -16,17 +16,6 @@ public class RentalTest {
      * This test will calculate rental creation.
      */
     @Test
-    public void testRentalCanBeCreatedWithTwoParametersMovieAndRentalDay() {
-
-        Movie movie = new Regular("Rocky");
-        Rental rental = new Rental(movie, Constants.ONE);
-        Assert.assertTrue(rental instanceof Rental);
-    }
-
-    /**
-     * This test will calculate rental creation.
-     */
-    @Test
     public void testRentalCanBeCreatedWithParameters() {
         Movie newMovie = new Regular("Rocky");
         Rental rental = new Rental(newMovie, Constants.ONE);
