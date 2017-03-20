@@ -10,6 +10,9 @@ import static org.junit.Assert.assertEquals;
  * Created by Bruno Barrios on 3/14/2017.
  */
 public class RentalTest {
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void TestRentalCanBeCreatedWith2ParametersMovieAndRentalDay() {
 
@@ -18,6 +21,9 @@ public class RentalTest {
         Assert.assertTrue(rental instanceof Rental);
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testRentalCanBeCreatedWithParameters() {
         Movie newMovie = new Regular("Rocky");
@@ -25,6 +31,9 @@ public class RentalTest {
         Assert.assertNotNull(rental);
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testRentalCreateWithMovieandRentalDayShouldReturnThem() {
         Movie movie = new Regular("Rocky");
@@ -34,6 +43,9 @@ public class RentalTest {
 
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testRentalReturnWithTitleandPriceParamsShouldReturnThem() {
         Movie movie = new Regular("Rocky");
@@ -43,6 +55,9 @@ public class RentalTest {
         assertEquals(movie, rental.getMovie());
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testCalculateChargeRegularMovie() {
         Movie movie = new Regular("Rocky");
@@ -52,6 +67,9 @@ public class RentalTest {
         assertEquals(movie, rental.getMovie());
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testCalculateChargeRegularPriceWhitRentalMoreThat4Day() {
         Movie movie = new Regular("Rocky");
@@ -61,6 +79,9 @@ public class RentalTest {
         assertEquals(movie, rental.getMovie());
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testCalculateChargeNewReleasePrice() {
         Movie movie = new NewRelease("Rocky");
@@ -69,6 +90,9 @@ public class RentalTest {
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(1), 0);
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testCalculateChargeNewReleasePriceWhitRentalMoreThat4Day() {
         Movie movie = new NewRelease("Rocky");
@@ -77,6 +101,9 @@ public class RentalTest {
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(4), 0);
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testCalculateChildrenPrice() {
         Movie movie = new Childrens("Lion King");
@@ -85,15 +112,16 @@ public class RentalTest {
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(1), 0);
     }
 
+    /**
+     * This test will calculate rental creation.
+     */
     @Test
     public void testCalculateChildrenPriceWhitRentalMoreThat3Days() {
         Movie movie = new Childrens("Lion King");
         Rental rental = new Rental(movie, 5);
         double expectedResult = 3.0;
-        assertEquals(expectedResult,  rental.getMovie().calculateMovieAmount(5), 0);
+        assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(5), 0);
     }
-
-
 
 
 }

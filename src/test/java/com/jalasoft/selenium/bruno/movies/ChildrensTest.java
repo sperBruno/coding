@@ -21,7 +21,7 @@ public class ChildrensTest {
     }
 
     /**
-     *
+     * This test will calculate charge rental days.
      */
     @Test
     public void testCalculateChargeMovieFor1DayRental() {
@@ -29,6 +29,9 @@ public class ChildrensTest {
         assertEquals(expectedResult, movie.calculateMovieAmount(1), 0);
     }
 
+    /**
+     * This test will calculate charge rental days.
+     */
     @Test
     public void testCalculateChargeMovieFor7DayRental() {
         final double expectedResult = 6.0;

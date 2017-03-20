@@ -21,5 +21,4 @@ public class CustomerTest {
         final int expectedResult = 3;
         assertEquals(expectedResult, customer.getRentalList().size());
     }
-
 }

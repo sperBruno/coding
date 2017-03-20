@@ -1,4 +1,4 @@
-package com.jalasoft.selenium;
+package com.jalasoft.selenium.bruno;
 
 /**
  * Created by Bruno Barrios on 3/14/2017.

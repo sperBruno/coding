@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.jalasoft.selenium.Constants.EXPLICIT_WAIT;
-import static com.jalasoft.selenium.Constants.IMPLICIT_WAIT;
+import static com.jalasoft.selenium.bruno.Constants.EXPLICIT_WAIT;
+import static com.jalasoft.selenium.bruno.Constants.IMPLICIT_WAIT;
 
 /**
  * Created by Bruno Barrios on 3/13/2017.
