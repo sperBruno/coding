@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.movies;
 
+import com.jalasoft.selenium.bruno.Constants;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,7 +27,7 @@ public class ChildrensTest {
     @Test
     public void testCalculateChargeMovieFor1DayRental() {
         final double expectedResult = 1.5;
-        assertEquals(expectedResult, movie.calculateMovieAmount(1), 0);
+        assertEquals(expectedResult, movie.calculateMovieAmount(Constants.ONE), Constants.DELTA);
     }
 
     /**
@@ -35,7 +36,7 @@ public class ChildrensTest {
     @Test
     public void testCalculateChargeMovieFor7DayRental() {
         final double expectedResult = 6.0;
-        assertEquals(expectedResult, movie.calculateMovieAmount(7), 0);
+        assertEquals(expectedResult, movie.calculateMovieAmount(Constants.SEVEN), Constants.DELTA);
     }
 }
 
