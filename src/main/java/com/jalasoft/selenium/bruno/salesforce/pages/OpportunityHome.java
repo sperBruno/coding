@@ -1,12 +1,15 @@
-package com.jalasoft.selenium.bruno.salesforce;
+package com.jalasoft.selenium.bruno.salesforce.pages;
 
+import com.jalasoft.selenium.bruno.salesforce.BaseHome;
+import com.jalasoft.selenium.bruno.salesforce.DriverManager;
+import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
  * Created by Bruno Barrios on 3/15/2017.
  */
-public class OpportunityHome extends BaseHome{
+public class OpportunityHome extends BaseHome {
 
 
     public static final By newOportunityButton = By.cssSelector(".slds-button.slds-button--neutral.slds-truncate");

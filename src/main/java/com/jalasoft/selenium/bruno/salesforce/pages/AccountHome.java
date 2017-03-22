@@ -1,4 +1,6 @@
-package com.jalasoft.selenium.bruno.salesforce;
+package com.jalasoft.selenium.bruno.salesforce.pages;
+
+import com.jalasoft.selenium.bruno.salesforce.BaseHome;
 
 /**
  * Created by Bruno Barrios on 3/20/2017.

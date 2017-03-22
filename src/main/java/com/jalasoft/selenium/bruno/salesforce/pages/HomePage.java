@@ -1,5 +1,6 @@
-package com.jalasoft.selenium.bruno.salesforce;
+package com.jalasoft.selenium.bruno.salesforce.pages;
 
+import com.jalasoft.selenium.bruno.salesforce.BaseHome;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 

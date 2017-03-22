@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
+import com.jalasoft.selenium.bruno.salesforce.pages.HomePage;
 import org.junit.Assert;
 import org.junit.Test;
 

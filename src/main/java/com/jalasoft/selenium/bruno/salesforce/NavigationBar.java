@@ -1,16 +1,12 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
+import com.jalasoft.selenium.bruno.salesforce.pages.*;
 import org.openqa.selenium.By;
 
 /**
  * Created by Bruno Barrios on 3/20/2017.
  */
 public class NavigationBar extends BasePage{
-
-    public static AccountHome clickAccountHomeTab() {
-        DriverManager.getInstance().getDriver();
-        return new AccountHome();
-    }
 
     public static OpportunityHome clickOpportunityTab() {
         By opportunitiesTab = By.cssSelector("a[title='Opportunities'");

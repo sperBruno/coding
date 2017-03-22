@@ -1,4 +1,4 @@
-package com.jalasoft.selenium.bruno.salesforce;
+package com.jalasoft.selenium.bruno.salesforce.pages;
 
 /**
  * Created by Bruno Barrios on 3/21/2017.
