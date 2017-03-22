@@ -2,7 +2,6 @@ package com.jalasoft.selenium.bruno.salesforce.common;
 
 import com.jalasoft.selenium.bruno.salesforce.DriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**

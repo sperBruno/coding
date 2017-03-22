@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.salesforce.pages;
 
+import com.jalasoft.selenium.bruno.salesforce.AccountForm;
 import com.jalasoft.selenium.bruno.salesforce.BaseHome;
 
 /**
@@ -7,9 +8,8 @@ import com.jalasoft.selenium.bruno.salesforce.BaseHome;
  */
 public class AccountHome extends BaseHome {
 
-
-    @Override
-    public void clickNewButton() {
-        
+    public AccountForm clickNewButton() {
+        super.clickNew();
+        return new AccountForm();
     }
 }

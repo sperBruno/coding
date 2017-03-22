@@ -1,85 +1,85 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
+import com.jalasoft.selenium.bruno.salesforce.common.Common;
 import com.jalasoft.selenium.bruno.salesforce.pages.*;
 import org.openqa.selenium.By;
 
 /**
  * Created by Bruno Barrios on 3/20/2017.
  */
-public class NavigationBar extends BasePage{
+public class NavigationBar extends BasePage {
+
+    private static final By opportunitiesTab = By.cssSelector("a[title='Opportunities'");
+    private static final By accountTab = By.cssSelector("a[title='Accounts'");
+    private static final By homeTab = By.cssSelector("a[title='Home'");
+    private static final By chatterTab = By.cssSelector("a[title='Chatter'");
+    private static final By contactsTab = By.cssSelector("a[title='Constacts'");
+    private static final By leadsTab = By.cssSelector("a[title='Leads'");
+    private static final By calendarTab = By.cssSelector("a[title='Calendar'");
+    private static final By dashboardsTab = By.cssSelector("a[title='Dashboards'");
+    private static final By groupsTab = By.cssSelector("a[title='Groups'");
+    private static final By notesTab = By.cssSelector("a[title='Notes'");
+    private static final By filesTab = By.cssSelector("a[title='Files'");
+    private static final By quotesTab = By.cssSelector("a[title='Quotes'");
 
     public static OpportunityHome clickOpportunityTab() {
-        By opportunitiesTab = By.cssSelector("a[title='Opportunities'");
-        DriverManager.getInstance().getDriver().findElement(opportunitiesTab).click();
+        Common.clickButton(opportunitiesTab);
         return new OpportunityHome();
     }
 
     public static AccountHome clickAccountTab() {
-        By accountTab = By.cssSelector("a[title='Accounts'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(accountTab);
         return new AccountHome();
     }
 
     public static HomePage clickHomeTab() {
-        By accountTab = By.cssSelector("a[title='Home'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(homeTab);
         return new HomePage();
     }
 
     public static ChatterPage clickChatterTab() {
-        By accountTab = By.cssSelector("a[title='Chatter'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(chatterTab);
         return new ChatterPage();
     }
 
     public static ContactsPage clickContactsTab() {
-        By accountTab = By.cssSelector("a[title='Constacts'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(contactsTab);
         return new ContactsPage();
     }
 
     public static LeadsPage clickLeadsTab() {
-        By accountTab = By.cssSelector("a[title='Leads'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(leadsTab);
         return new LeadsPage();
     }
 
     public static CalendarPage clickCalendarTab() {
-        By accountTab = By.cssSelector("a[title='Calendar'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(calendarTab);
         return new CalendarPage();
     }
 
     public static DashboardsPage clickDashboardsTab() {
-        By accountTab = By.cssSelector("a[title='Dashboards'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(dashboardsTab);
         return new DashboardsPage();
     }
 
     public static GroupsPage clickGroupsTab() {
-        By accountTab = By.cssSelector("a[title='Groups'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(groupsTab);
         return new GroupsPage();
     }
 
     public static NotesPage clickNotesTab() {
-        By accountTab = By.cssSelector("a[title='Notes'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(notesTab);
         return new NotesPage();
     }
+
     public static FilesPage clickFilesTab() {
-        By accountTab = By.cssSelector("a[title='Files'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(filesTab);
         return new FilesPage();
     }
 
     public static QuotesPage clickQuotesTab() {
-        By accountTab = By.cssSelector("a[title='Quotes'");
-        DriverManager.getInstance().getDriver().findElement(accountTab).click();
+        Common.clickButton(quotesTab);
         return new QuotesPage();
-    }
-    private static void clickTab(String tab) {
-        DriverManager.getInstance().getDriver().findElement(By.className(tab));
     }
 
 }

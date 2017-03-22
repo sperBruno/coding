@@ -1,27 +1,30 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
+import com.jalasoft.selenium.bruno.salesforce.common.Common;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * Created by Bruno Barrios on 3/20/2017.
  */
 public abstract class BaseForm extends BasePage {
 
-    protected By saveBtn = By.cssSelector("button[title='Save']");
-    protected By cancelBtn = By.cssSelector("button[title='Cancel']");
-    protected By saveAndNew = By.cssSelector("button[title='Save & New']");
+    protected static final String SAVE = "Save";
+    protected static final String CANCEL = "Cancel";
+    protected static final String SAVEANDNEW = "Save & New";
 
 
-    public void clickSave() {
-        DriverManager.getInstance().getDriver().findElement(saveBtn);
+    protected void clickOption(String option) {
+        By optionButton = By.cssSelector(String.format("button[title='%s']", option));
+
+        wait.until(ExpectedConditions.elementToBeClickable(optionButton));
+        driver.findElement(optionButton).click();
     }
 
+    public abstract BasePage clickSaveButton();
 
-    public void clickSaveAndNew() {
-        DriverManager.getInstance().getDriver().findElement(saveAndNew);
-    }
+    public abstract BasePage clickSaveAndNewButton();
 
-    public  void  clickCancel() {
-        DriverManager.getInstance().getDriver().findElement(cancelBtn);
-    }
+    public abstract BasePage clickCancelButton();
+
 }

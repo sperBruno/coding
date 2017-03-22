@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
+import com.jalasoft.selenium.bruno.salesforce.common.Common;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -8,13 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  */
 public abstract class BaseHome extends BasePage{
 
-    protected By newButton = By.id("");
+    protected By newButton = By.id("div.active.oneContent a[title='New']");
 
-    public void clickNew() {
+
+    protected void clickNew() {
         wait.until(ExpectedConditions.elementToBeClickable(newButton));
         driver.findElement(newButton).click();
     }
 
-    public abstract void clickNewButton();
+    public abstract BasePage clickNewButton();
 
 }
