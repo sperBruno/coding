@@ -1,42 +1,45 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
-import com.jalasoft.selenium.bruno.salesforce.common.Common;
+import com.jalasoft.selenium.bruno.salesforce.common.ActionUtil;
 import com.jalasoft.selenium.bruno.salesforce.pages.HomePage;
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by Bruno Barrios on 3/15/2017.
  */
 public class Login extends BasePage {
-    private final By usernameTextField = By.id("username");
-    private final By passwordTextField = By.id("password");
-    private final By loginButton = By.id("Login");
+    @FindBy(id = "username")
+    @CacheLookup
+    private WebElement usernameTextField;
 
-    /**
-     * This method will be used to set the user login.
-     *
-     * @param userName of the user.
-     */
+    @FindBy(id = "password")
+    @CacheLookup
+    private WebElement passwordTextField;
+
+    @FindBy(id = "Login")
+    @CacheLookup
+    private WebElement loginButton;
+
     public void setUserNameTextField(String userName) {
-        Common.setTextBoxField(usernameTextField, userName);
+        ActionUtil.setTextField(usernameTextField,userName);
     }
 
-    /**
-     * This method will set the password of a user in login page.
-     *
-     * @param userPassword of the user.
-     */
-    public void setUserPasswordTextField(String userPassword) {
-        Common.setTextBoxField(passwordTextField, userPassword);
+    public void setPasswordTextField(String password) {
+        ActionUtil.setTextField(passwordTextField,password);
     }
 
-    /**
-     * This method will click on login button.
-     *
-     * @return Salesforce home page.
-     */
     public HomePage clickLoginButton() {
-        Common.clickButton(loginButton);
+        ActionUtil.clickElement(loginButton);
         return new HomePage();
     }
+
+    public static HomePage loginAs(String username, String password) {
+         if(HomePage.isProfileIconVisible() == true) {
+             Login.logout();
+         }
+        return new HomePage();
+    }
+
 }
