@@ -12,34 +12,43 @@ import org.openqa.selenium.support.FindBy;
 public class Login extends BasePage {
     @FindBy(id = "username")
     @CacheLookup
-    private WebElement usernameTextField;
+    private static WebElement usernameTextField;
 
     @FindBy(id = "password")
     @CacheLookup
-    private WebElement passwordTextField;
+    private static WebElement passwordTextField;
 
     @FindBy(id = "Login")
     @CacheLookup
-    private WebElement loginButton;
+    private static WebElement loginButton;
 
-    public void setUserNameTextField(String userName) {
-        ActionUtil.setTextField(usernameTextField,userName);
+    public static void setUserNameTextField(String userName) {
+        ActionUtil.setTextField(usernameTextField, userName);
     }
 
-    public void setPasswordTextField(String password) {
-        ActionUtil.setTextField(passwordTextField,password);
+    public static void setPasswordTextField(String password) {
+        ActionUtil.setTextField(passwordTextField, password);
     }
 
-    public HomePage clickLoginButton() {
+    public static HomePage clickLoginButton() {
         ActionUtil.clickElement(loginButton);
         return new HomePage();
     }
 
     public static HomePage loginAs(String username, String password) {
-         if(HomePage.isProfileIconVisible() == true) {
-             Login.logout();
-         }
+        if (HomePage.isProfileIconVisible()) {
+            Login.logout();
+            Login.loginAs(username, password);
+        }
+        Login.setUserNameTextField(username);
+        Login.setPasswordTextField(password);
+        Login.clickLoginButton();
         return new HomePage();
+    }
+
+    public static Login logout() {
+        
+        return new Login();
     }
 
 }

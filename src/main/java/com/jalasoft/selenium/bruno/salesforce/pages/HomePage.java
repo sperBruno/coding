@@ -5,7 +5,10 @@ import com.jalasoft.selenium.bruno.salesforce.BasePage;
 import com.jalasoft.selenium.bruno.salesforce.DriverManager;
 import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Bruno Barrios on 3/15/2017.
@@ -26,7 +29,17 @@ public class HomePage extends BasePage {
     }
 
     public static boolean isProfileIconVisible() {
-        return DriverManager.getInstance().getDriver().findElement(profileIcon).isDisplayed();
+        boolean isVisible = false;
+        try {
+            DriverManager.getInstance().getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+            isVisible = DriverManager.getInstance().getDriver().findElement(profileIcon).isDisplayed();
+            DriverManager.getInstance().getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        }catch (WebDriverException e) {
+            return isVisible;
+        }
+        return isVisible;
     }
 
 }
