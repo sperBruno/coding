@@ -47,7 +47,7 @@ public class Login extends BasePage {
     }
 
     public static Login logout() {
-        
+
         return new Login();
     }
 

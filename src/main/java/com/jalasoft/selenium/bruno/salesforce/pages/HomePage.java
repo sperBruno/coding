@@ -6,6 +6,7 @@ import com.jalasoft.selenium.bruno.salesforce.DriverManager;
 import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.concurrent.TimeUnit;
@@ -17,6 +18,9 @@ public class HomePage extends BasePage {
     private static final By profileIcon = By.cssSelector(".profileTrigger");
 
     private By profileNameText = By.cssSelector(".profile-card-name .profile-link-label");
+
+    @FindBy(css = ".profile-link-label.logout.uiOutputURL")
+    public static 
 
     public void clickProfileIcon() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(profileIcon));
