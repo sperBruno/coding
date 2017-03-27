@@ -8,7 +8,7 @@ import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
  */
 public class ContactsPage extends BaseHome{
 
-    public OpportunityForm clickNewButton() {
+    public OpportunityForm clickOption() {
         super.clickNew();
         return new OpportunityForm();
     }

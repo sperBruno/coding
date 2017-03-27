@@ -1,8 +1,9 @@
 package com.jalasoft.selenium.bruno.salesforce.pages;
 
 import com.jalasoft.selenium.bruno.salesforce.BaseHome;
+import com.jalasoft.selenium.bruno.salesforce.NewListView;
 import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
-import org.openqa.selenium.By;
+import com.jalasoft.selenium.bruno.salesforce.common.ActionUtil;
 
 /**
  * Created by Bruno Barrios on 3/15/2017.
@@ -10,9 +11,14 @@ import org.openqa.selenium.By;
 public class OpportunityHome extends BaseHome {
 
 
-    @Override
-    public OpportunityForm clickNewButton() {
-            super.clickNew();
-            return new OpportunityForm();
+    public OpportunityForm clickNewOpportunityButton() {
+        ActionUtil.clickElement(newButton);
+        return new OpportunityForm();
+    }
+
+    public NewListView selectOptionSetting() {
+        ActionUtil.clickElement(setting);
+        ActionUtil.clickElement(newSettingOption);
+        return new NewListView();
     }
 }

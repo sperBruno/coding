@@ -13,6 +13,7 @@ public abstract class BaseForm extends BasePage {
     protected static final String CANCEL = "Cancel";
     protected static final String SAVEANDNEW = "Save & New";
 
+    
 
     protected void clickOption(String option) {
         By optionButton = By.cssSelector(String.format("button[title='%s']", option));
