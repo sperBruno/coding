@@ -1,6 +1,8 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
+import com.jalasoft.selenium.bruno.salesforce.pages.AccountHome;
 import com.jalasoft.selenium.bruno.salesforce.pages.HomePage;
+import com.jalasoft.selenium.bruno.salesforce.pages.OpportunityHome;
 import org.junit.Test;
 
 /**
@@ -13,9 +15,9 @@ public class HomePageTest {
         //When
         Login login = new Login();
         login.setUserNameTextField("kaos_bruno@hotmail.es");
-        login.setUserPasswordTextField("74139807Bbv");
-        HomePage homePage = login.clickLoginButton();
-        homePage.clickOportunitiesOption();
+        login.setPasswordTextField("74139807Bbv");
+        login.clickLoginButton();
+         OpportunityHome accountHome = NavigationBar.clickOpportunityTab();
 //        String actualProfileName = homePage.getProfileName();
     }
 }

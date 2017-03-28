@@ -24,7 +24,7 @@ public class OpportunityTest {
     public void testCreateAccount() {
         // When
         AccountHome accountsHome = NavigationBar.clickAccountTab();
-        AccountForm accountForm = accountsHome.clickOption();
+        AccountForm accountForm = accountsHome.clickNewAccount();
         final String accountName = "My Account Test";
         accountForm.setAccountNameTextField(accountName);
         AccountDetail accountDetail = accountForm.clickSaveButton();
@@ -41,7 +41,7 @@ public class OpportunityTest {
         final String opportunityName = "Test opportunity";
         final String closeDate = "3/18/2017";
         final String qualificationStage = "Qualification";
-        OpportunityForm opportunityForm = opportunitiesHome.clickOption();
+        OpportunityForm opportunityForm = opportunitiesHome.clickNewOpportunityButton();
         opportunityForm.setOpportunityName(opportunityName);
         opportunityForm.setCloseDateTextInput(closeDate);
         opportunityForm.selectStage(qualificationStage);

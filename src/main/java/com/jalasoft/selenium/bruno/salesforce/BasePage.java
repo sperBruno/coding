@@ -12,6 +12,9 @@ public abstract class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
+    /**
+     * This is the constructor of Base Page.
+     */
     public BasePage() {
         driver = DriverManager.getInstance().getDriver();
         wait = DriverManager.getInstance().getWait();

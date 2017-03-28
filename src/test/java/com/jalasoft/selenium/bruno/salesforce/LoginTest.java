@@ -12,10 +12,8 @@ public class LoginTest {
     @Test
     public void testLogin() {
         //When
-        Login login = new Login();
-        login.setUserNameTextField("kaos_bruno@hotmail.es");
-        login.setUserPasswordTextField("74139807Bbv");
-        HomePage homePage = login.clickLoginButton();
+
+        HomePage homePage = Login.loginAs("kaos_bruno@hotmail.es","74139807Bbv");
         homePage.clickProfileIcon();
         String actualProfileName = homePage.getProfileName();
 

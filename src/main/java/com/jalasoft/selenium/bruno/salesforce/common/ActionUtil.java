@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  */
 public class ActionUtil {
 
+    private ActionUtil() {}
+
     public static void setTextField(WebElement webElement, String text) {
         DriverManager.getInstance().getWait().until(ExpectedConditions.visibilityOf(webElement));
         webElement.clear();
@@ -17,5 +19,9 @@ public class ActionUtil {
 
     public static void clickElement(WebElement webElement) {
         DriverManager.getInstance().getWait().until(ExpectedConditions.elementToBeClickable(webElement)).click();
+    }
+
+    public static String getTextElement(WebElement webElement) {
+        return DriverManager.getInstance().getWait().until(ExpectedConditions.visibilityOf(webElement)).getText();
     }
 }
