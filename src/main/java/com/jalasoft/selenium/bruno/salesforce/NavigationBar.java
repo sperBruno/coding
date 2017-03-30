@@ -1,84 +1,116 @@
 package com.jalasoft.selenium.bruno.salesforce;
 
-import com.jalasoft.selenium.bruno.salesforce.common.Common;
+import com.jalasoft.selenium.bruno.salesforce.common.ActionUtil;
 import com.jalasoft.selenium.bruno.salesforce.pages.*;
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by Bruno Barrios on 3/20/2017.
  */
 public class NavigationBar extends BasePage {
 
-    private static final By opportunitiesTab = By.cssSelector("a[title='Opportunities'");
-    private static final By accountTab = By.cssSelector("a[title='Accounts'");
-    private static final By homeTab = By.cssSelector("a[title='Home'");
-    private static final By chatterTab = By.cssSelector("a[title='Chatter'");
-    private static final By contactsTab = By.cssSelector("a[title='Constacts'");
-    private static final By leadsTab = By.cssSelector("a[title='Leads'");
-    private static final By calendarTab = By.cssSelector("a[title='Calendar'");
-    private static final By dashboardsTab = By.cssSelector("a[title='Dashboards'");
-    private static final By groupsTab = By.cssSelector("a[title='Groups'");
-    private static final By notesTab = By.cssSelector("a[title='Notes'");
-    private static final By filesTab = By.cssSelector("a[title='Files'");
-    private static final By quotesTab = By.cssSelector("a[title='Quotes'");
+    @FindBy(css = "a[title='Opportunities'")
+    private static  WebElement opportunitiesTab;
 
+    @FindBy(css = "a[title='Accounts'")
+    private static WebElement accountTab;
+
+    @FindBy(css = "a[title='Home'")
+    private static WebElement homeTab;
+
+    @FindBy(css = "a[title='Chatter'")
+    private static WebElement chatterTab;
+
+    @FindBy(css = "a[title='Constacts'")
+    private static WebElement contactsTab;
+
+    @FindBy(css = "a[title='Leads'")
+    private static WebElement leadsTab;
+
+    @FindBy(css = "a[title='Calendar'")
+    private static WebElement calendarTab;
+
+    @FindBy(css = "a[title='Dashboards'")
+    private static WebElement dashboardsTab;
+
+    @FindBy(css = "a[title='Groups'")
+    private static WebElement groupsTab;
+
+    @FindBy(css = "a[title='Notes'")
+    private static WebElement notesTab;
+
+    @FindBy(css = "a[title='Files'")
+    private static WebElement filesTab;
+
+    @FindBy(css = "a[title='Quotes'")
+    private static WebElement quotesTab;
+
+    /**
+     * This method will select a Opportunity tab
+     * @return opportunity.
+     */
     public static OpportunityHome clickOpportunityTab() {
-        Common.clickButton(opportunitiesTab);
+        ActionUtil.clickElement(opportunitiesTab);
         return new OpportunityHome();
     }
 
+    /**
+     * This method will select account tab
+     * @return
+     */
     public static AccountHome clickAccountTab() {
-        Common.clickButton(accountTab);
+        ActionUtil.clickElement(accountTab);
         return new AccountHome();
     }
 
     public static HomePage clickHomeTab() {
-        Common.clickButton(homeTab);
+        ActionUtil.clickElement(homeTab);
         return new HomePage();
     }
 
     public static ChatterPage clickChatterTab() {
-        Common.clickButton(chatterTab);
+        ActionUtil.clickElement(chatterTab);
         return new ChatterPage();
     }
 
     public static ContactsPage clickContactsTab() {
-        Common.clickButton(contactsTab);
+        ActionUtil.clickElement(contactsTab);
         return new ContactsPage();
     }
 
     public static LeadsPage clickLeadsTab() {
-        Common.clickButton(leadsTab);
+        ActionUtil.clickElement(leadsTab);
         return new LeadsPage();
     }
 
     public static CalendarPage clickCalendarTab() {
-        Common.clickButton(calendarTab);
+        ActionUtil.clickElement(calendarTab);
         return new CalendarPage();
     }
 
     public static DashboardsPage clickDashboardsTab() {
-        Common.clickButton(dashboardsTab);
+        ActionUtil.clickElement(dashboardsTab);
         return new DashboardsPage();
     }
 
     public static GroupsPage clickGroupsTab() {
-        Common.clickButton(groupsTab);
+        ActionUtil.clickElement(groupsTab);
         return new GroupsPage();
     }
 
     public static NotesPage clickNotesTab() {
-        Common.clickButton(notesTab);
+        ActionUtil.clickElement(notesTab);
         return new NotesPage();
     }
 
     public static FilesPage clickFilesTab() {
-        Common.clickButton(filesTab);
+        ActionUtil.clickElement(filesTab);
         return new FilesPage();
     }
 
     public static QuotesPage clickQuotesTab() {
-        Common.clickButton(quotesTab);
+        ActionUtil.clickElement(quotesTab);
         return new QuotesPage();
     }
 

@@ -51,4 +51,20 @@ public class OpportunityTest {
         final String actualOpportunityName = opportunityDetail.getOpportunityName();
         assertEquals(opportunityName, actualOpportunityName);
     }
+
+    @Test
+    public void testCreateOpportunity1() {
+        // When
+        OpportunityHome opportunitiesHome = NavigationBar.clickOpportunityTab();
+        NewListView newListView= opportunitiesHome.clickNewMenuITEMControl();
+
+        final String opportunityName = "Test opportunity";
+        newListView.setNewListViewNameTextField(opportunityName);
+        newListView.selectGlobalRadioButton();
+        newListView.clickSaveButton();
+
+        // Then
+        final String actualOpportunityName = opportunitiesHome.getOpportunityViewName();
+        assertEquals(opportunityName, actualOpportunityName);
+    }
 }
