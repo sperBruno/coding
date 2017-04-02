@@ -2,8 +2,11 @@ package com.jalasoft.selenium.bruno.salesforce;
 
 import com.jalasoft.selenium.bruno.salesforce.common.ActionUtil;
 import com.jalasoft.selenium.bruno.salesforce.pages.HomePage;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Bruno Barrios on 3/15/2017.
@@ -52,13 +55,28 @@ public class Login extends BasePage {
      * @return Home page.
      */
     public static HomePage loginAs(String username, String password) {
-        if (HomePage.isProfileIconVisible()) {
-            HomePage.logout();
-            Login.loginAs(username, password);
+//        if (HomePage.isProfileIconVisible()) {
+//            HomePage.logout();
+//            Login.loginAs(username, password);
+//        }
+//        Login.setUserNameTextField(username);
+//        Login.setPasswordTextField(password);
+//        Login.clickLoginButton();
+        if() {}
+
+        driver.navigate().refresh();
+        try {
+            driver.manage().implicit;
+            DriverManager.getInstance().getWait().withTimeout(5, TimeUnit.SECONDS);
+            HomePage homePage = new HomePage();
+
+        } catch (WebDriverException e) {
+
+        }finally {
+            DriverManager.getInstance().getWait().withTimeout(30,TimeUnit.SECONDS);
         }
-        Login.setUserNameTextField(username);
-        Login.setPasswordTextField(password);
-        Login.clickLoginButton();
+
+
         return new HomePage();
     }
 

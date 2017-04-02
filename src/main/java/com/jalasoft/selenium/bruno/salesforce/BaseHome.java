@@ -23,7 +23,7 @@ public abstract class BaseHome extends BasePage {
         setting.click();
     }
 
-    public  NewListView 
+//    public  NewListView
 
     public DeleteAlert deleteAlert() {
         return new DeleteAlert();
