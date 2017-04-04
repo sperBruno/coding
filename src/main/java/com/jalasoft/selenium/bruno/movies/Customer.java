@@ -3,7 +3,6 @@ package com.jalasoft.selenium.bruno.movies;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.jalasoft.selenium.bruno.movies.NewRelease.NEW_RELEASE;
 
 /**
  * This class represents a Customer.
@@ -47,21 +46,15 @@ class Customer {
      * @return the ticket
      */
     public String statement() {
-        double totalAmount = 0;
-        int frequentRenterPoints = 0;
+
         StringBuilder result = new StringBuilder();
         result.append("Rental Record for " + getName() + BRAKE_LINE);
         for (Rental rentals : rentalList) {
-            double thisAmount;
-            thisAmount = rentals.getMovie().calculateMovieAmount(rentals.getDaysRented());
-            frequentRenterPoints = getFrequentRenterPoints(frequentRenterPoints, rentals);
             result.append(TABULATION + rentals.getMovie().getTitle() + TABULATION);
-            result.append(String.valueOf(thisAmount)).append(BRAKE_LINE);
-            totalAmount += thisAmount;
         }
-        result.append("Amount owed is " + totalAmount);
+        result.append("Amount owed is " + String.valueOf(calculateTotalAmount())).append(BRAKE_LINE);
         result.append(BRAKE_LINE);
-        result.append("You earned " + frequentRenterPoints);
+        result.append("You earned " + String.valueOf(calculateTotalFrequentRentalPoints())).append(BRAKE_LINE);
         result.append(" frequent renter points");
         return result.toString();
     }
@@ -76,7 +69,7 @@ class Customer {
     public int getFrequentRenterPoints(final int frequentRenterPoints, final Rental rentals) {
         int count = frequentRenterPoints;
         count++;
-        if ((rentals.getMovie().getPriceCode() == NEW_RELEASE)
+        if ((rentals.getMovie().getPriceCode() == 1)
                 &&
                 rentals.getDaysRented() > 1) {
             count++;
@@ -86,10 +79,38 @@ class Customer {
 
     /**
      * this method will be used to get rentals list.
+     *
      * @return rentals list.
      */
     public List<Rental> getRentalList() {
         return rentalList;
     }
 
+    /**
+     * This method is going to calculate Total amount.
+     *
+     * @return Total amount.
+     */
+    private double calculateTotalAmount() {
+        double totalAmount = 0;
+        double thisAmount;
+        for (Rental rentals : rentalList) {
+            thisAmount = rentals.getMovie().calculateMovieAmount(rentals.getDaysRented());
+            totalAmount += thisAmount;
+        }
+        return totalAmount;
+    }
+
+    /**
+     * This method is going to calculate frequent rental points.
+     *
+     * @return total frequent rental points.
+     */
+    private double calculateTotalFrequentRentalPoints() {
+        int frequentRenterPoints = 0;
+        for (Rental rentals : rentalList) {
+            frequentRenterPoints = getFrequentRenterPoints(frequentRenterPoints, rentals);
+        }
+        return frequentRenterPoints;
+    }
 }

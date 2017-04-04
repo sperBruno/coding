@@ -4,7 +4,6 @@ package com.jalasoft.selenium.bruno.movies;
  * Created by Bruno Barrios on 3/6/2017.
  */
 public class Regular extends Movie {
-    public static final int REGULAR = 2;
 
     /**
      * This method is the constructo of a reagular movie.
@@ -12,7 +11,7 @@ public class Regular extends Movie {
      * @param titleMovie of aregular movie.
      */
     public Regular(final String titleMovie) {
-        super(titleMovie, REGULAR);
+        super(titleMovie);
     }
 
     /**
