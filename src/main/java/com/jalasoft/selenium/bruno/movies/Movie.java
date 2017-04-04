@@ -12,7 +12,6 @@ public abstract class Movie {
      * Contrucator of a movie.
      *
      * @param title     of a movie
-     * @param priceCode of a movie.
      */
     public Movie(final String title) {
         titleMovie = title;

@@ -5,8 +5,6 @@ package com.jalasoft.selenium.bruno.movies;
  */
 public class NewRelease extends Movie {
 
-    public static final int NEW_RELEASE = 1;
-
     /**
      * This is the constructor of a new release movie.
      *
