@@ -10,8 +10,8 @@ public class Regular extends Movie {
      *
      * @param titleMovie of aregular movie.
      */
-    public Regular(final String titleMovie) {
-        super(titleMovie);
+    public Regular(final String titleMovie, final int priceCode) {
+        super(titleMovie, priceCode);
     }
 
     /**

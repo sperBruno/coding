@@ -10,8 +10,8 @@ public class Childrens extends Movie {
      *
      * @param titleMovie for childrens movies.
      */
-    public Childrens(final String titleMovie) {
-        super(titleMovie);
+    public Childrens(final String titleMovie, final int priceCode) {
+        super(titleMovie, priceCode);
     }
 
     /**

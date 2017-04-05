@@ -6,15 +6,16 @@ package com.jalasoft.selenium.bruno.movies;
 public abstract class Movie {
 
     private String titleMovie;
-    private int priceCode = 2;
+    private int priceCode;
 
     /**
      * Contrucator of a movie.
      *
      * @param title     of a movie
      */
-    public Movie(final String title) {
+    public Movie(final String title, final int priceCode) {
         titleMovie = title;
+        this.priceCode = priceCode;
     }
 
     /**

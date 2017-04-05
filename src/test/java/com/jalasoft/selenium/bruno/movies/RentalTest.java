@@ -17,7 +17,7 @@ public class RentalTest {
      */
     @Test
     public void testRentalCanBeCreatedWithParameters() {
-        Movie newMovie = new Regular("Rocky");
+        Movie newMovie = new Regular("Rocky", Constants.TWO);
         Rental rental = new Rental(newMovie, Constants.ONE);
         Assert.assertNotNull(rental);
     }
@@ -27,7 +27,7 @@ public class RentalTest {
      */
     @Test
     public void testRentalCreateWithMovieAndRentalDayShouldReturnThem() {
-        Movie movie = new Regular("Rocky");
+        Movie movie = new Regular("Rocky", Constants.TWO);
         Rental rental = new Rental(movie, Constants.TWO);
         final int daysRental = Constants.TWO;
         assertEquals(daysRental, rental.getDaysRented());
@@ -39,7 +39,7 @@ public class RentalTest {
      */
     @Test
     public void testRentalReturnWithTitleAndPriceParamsShouldReturnThem() {
-        Movie movie = new Regular("Rocky");
+        Movie movie = new Regular("Rocky", Constants.TWO);
         Rental rental = new Rental(movie, Constants.ONE);
         final int daysRental = Constants.ONE;
         assertEquals(daysRental, rental.getDaysRented());
@@ -51,7 +51,7 @@ public class RentalTest {
      */
     @Test
     public void testCalculateChargeRegularMovie() {
-        Movie movie = new Regular("Rocky");
+        Movie movie = new Regular("Rocky", Constants.TWO);
         Rental rental = new Rental(movie, Constants.ONE);
         final double expectedResult = Constants.ONE;
         assertEquals(expectedResult, rental.getDaysRented(), Constants.DELTA);
@@ -63,7 +63,7 @@ public class RentalTest {
      */
     @Test
     public void testCalculateChargeRegularPriceWhitRentalMoreThat4Day() {
-        Movie movie = new Regular("Rocky");
+        Movie movie = new Regular("Rocky",Constants.TWO);
         Rental rental = new Rental(movie, Constants.NINE);
         final double expectedResult = 10.5;
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(Constants.NINE), Constants.DELTA);
@@ -75,7 +75,7 @@ public class RentalTest {
      */
     @Test
     public void testCalculateChargeNewReleasePrice() {
-        Movie movie = new NewRelease("Rocky");
+        Movie movie = new NewRelease("Rocky",Constants.TWO);
         Rental rental = new Rental(movie, Constants.ONE);
         final double expectedResult = Constants.THREE;
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(Constants.ONE), Constants.DELTA);
@@ -86,7 +86,7 @@ public class RentalTest {
      */
     @Test
     public void testCalculateChargeNewReleasePriceWhitRentalMoreThat4Day() {
-        Movie movie = new NewRelease("Rocky");
+        Movie movie = new NewRelease("Rocky",Constants.TWO);
         Rental rental = new Rental(movie, Constants.FIVE);
         final double expectedResult = Constants.TWELVE;
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(Constants.FOUR), Constants.DELTA);
@@ -97,7 +97,7 @@ public class RentalTest {
      */
     @Test
     public void testCalculateChildrenPrice() {
-        Movie movie = new Childrens("Lion King");
+        Movie movie = new Childrens("Lion King",Constants.TWO);
         Rental rental = new Rental(movie, Constants.ONE);
         final double expectedResult = 1.5;
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(Constants.ONE), Constants.DELTA);
@@ -108,7 +108,7 @@ public class RentalTest {
      */
     @Test
     public void testCalculateChildrenPriceWhitRentalMoreThat3Days() {
-        Movie movie = new Childrens("Lion King");
+        Movie movie = new Childrens("Lion King",Constants.TWO);
         Rental rental = new Rental(movie, Constants.FIVE);
         final double expectedResult = 3.0;
         assertEquals(expectedResult, rental.getMovie().calculateMovieAmount(Constants.FIVE), Constants.DELTA);

@@ -1,5 +1,6 @@
 package com.jalasoft.selenium.bruno.movies;
 
+import com.jalasoft.selenium.bruno.Constants;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,7 +21,7 @@ public class RegularTest {
      */
     @Before
     public void setUp() {
-        movie = new NewRelease("Rocky I");
+        movie = new NewRelease("Rocky I", Constants.TWO);
     }
 
     /**

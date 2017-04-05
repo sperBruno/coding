@@ -18,7 +18,7 @@ public class ChildrensTest {
      */
     @Before
     public void setUp() {
-        movie = new Childrens("X-Men");
+        movie = new Childrens("X-Men", Constants.TWO);
     }
 
     /**
