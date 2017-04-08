@@ -27,7 +27,7 @@ public class NewListViewTest {
         AccountHome accountsHome = NavigationBar.clickAccountTab();
         NewListView newAccountListView = accountsHome.clickAccountListView();
         final String listViewName = "Testing Account List View";
-        newAccountListView.setNewListViewName(listViewName);
+//        newAccountListView.setNewListViewName(listViewName);
         newAccountListView.clickViewListOption(allUsersRadioButton);
         newAccountListView.clickViewListOption(saveButton);
 

@@ -2,8 +2,9 @@ package com.jalasoft.selenium.bruno.salesforce;
 
 import com.jalasoft.selenium.bruno.salesforce.pages.AccountHome;
 import com.jalasoft.selenium.bruno.salesforce.pages.OpportunityHome;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class AccountTest {
 
-    @BeforeClass
+    @BeforeClass(groups = {"Smoke", "Mobile"})
     public static void setUp() {
         // Given
         Login login = new Login();
@@ -21,7 +22,7 @@ public class AccountTest {
         login.clickLoginButton();
     }
 
-    @Test
+    @Test(groups = {"Smoke", "Mobile"})
     public void testCreateAccount() {
         // When
         AccountHome accountsHome = NavigationBar.clickAccountTab();
