@@ -25,6 +25,7 @@ public class Login extends BasePage {
 
     /**
      * This method will be used to set the user name on login name text field.
+     *
      * @param userName of user.
      */
     public static void setUserNameTextField(final String userName) {
@@ -33,6 +34,7 @@ public class Login extends BasePage {
 
     /**
      * This method type the password on password text field.
+     *
      * @param password of user.
      */
     public static void setPasswordTextField(final String password) {
@@ -41,6 +43,7 @@ public class Login extends BasePage {
 
     /**
      * This method will click on login button
+     *
      * @return Home Page.
      */
     public static HomePage clickLoginButton() {
@@ -50,11 +53,12 @@ public class Login extends BasePage {
 
     /**
      * This method will be used to login to salesforce.
+     *
      * @param username text.
      * @param password text.
      * @return Home page.
      */
-    public static HomePage loginAs(String username, String password) {
+//    public static HomePage loginAs(String username, String password) {
 //        if (HomePage.isProfileIconVisible()) {
 //            HomePage.logout();
 //            Login.loginAs(username, password);
@@ -62,24 +66,24 @@ public class Login extends BasePage {
 //        Login.setUserNameTextField(username);
 //        Login.setPasswordTextField(password);
 //        Login.clickLoginButton();
-        if() {}
-
-        driver.navigate().refresh();
-        try {
-            driver.manage().implicit;
-            DriverManager.getInstance().getWait().withTimeout(5, TimeUnit.SECONDS);
-            HomePage homePage = new HomePage();
-
-        } catch (WebDriverException e) {
-
-        }finally {
-            DriverManager.getInstance().getWait().withTimeout(30,TimeUnit.SECONDS);
-        }
-
-
-        return new HomePage();
-    }
-
-
-
+//        if() {}
+//
+//        driver.navigate().refresh();
+//        try {
+//            driver.manage().implicit;
+//            DriverManager.getInstance().getWait().withTimeout(5, TimeUnit.SECONDS);
+//            HomePage homePage = new HomePage();
+//
+//        } catch (WebDriverException e) {
+//
+//        }finally {
+//            DriverManager.getInstance().getWait().withTimeout(30,TimeUnit.SECONDS);
+//        }
+//
+//
+//        return new HomePage();
+//    }
+//    }
 }
+
+

@@ -1,6 +1,7 @@
 package com.jalasoft.selenium.bruno.salesforce.pages;
 
 import com.jalasoft.selenium.bruno.salesforce.BaseHome;
+import com.jalasoft.selenium.bruno.salesforce.BasePage;
 import com.jalasoft.selenium.bruno.salesforce.NewListView;
 import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
 import com.jalasoft.selenium.bruno.salesforce.common.ActionUtil;
@@ -18,7 +19,12 @@ public class OpportunityHome extends BaseHome {
 
     public NewListView selectOptionSetting() {
         ActionUtil.clickElement(setting);
-        ActionUtil.clickElement(newSettingOption);
+//        ActionUtil.clickElement(newSettingOption);
         return new NewListView();
+    }
+
+    @Override
+    public BasePage clickNewButton() {
+        return null;
     }
 }

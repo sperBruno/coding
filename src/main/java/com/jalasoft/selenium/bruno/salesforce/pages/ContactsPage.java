@@ -1,6 +1,7 @@
 package com.jalasoft.selenium.bruno.salesforce.pages;
 
 import com.jalasoft.selenium.bruno.salesforce.BaseHome;
+import com.jalasoft.selenium.bruno.salesforce.BasePage;
 import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
 
 /**
@@ -8,4 +9,8 @@ import com.jalasoft.selenium.bruno.salesforce.OpportunityForm;
  */
 public class ContactsPage extends BaseHome{
 
+    @Override
+    public BasePage clickNewButton() {
+        return null;
+    }
 }

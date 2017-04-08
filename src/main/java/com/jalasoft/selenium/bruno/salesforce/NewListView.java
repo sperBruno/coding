@@ -48,10 +48,10 @@ public class NewListView extends BasePage{
 
     public void selectGlobalRadioButton()
     {
-        ActionUtil.clickElement(globalaction);
+//        ActionUtil.clickElement(globalaction);
     }
 
-    public void clickSaveButton() {
+    public void clickSaveButton(){
         ActionUtil.clickElement(saveButton);
         wait.until(ExpectedConditions.invisibilityOf(modalContainer));
     }

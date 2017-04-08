@@ -17,7 +17,7 @@ public class AccountHome extends BaseHome {
 
     public NewListView clickAccountListView() {
         ActionUtil.clickElement(setting);
-        ActionUtil.clickElement(newSettingOption);
+//        ActionUtil.clickElement(newSettingOption);
         return new NewListView();
     }
     public String getAccountListViewName() {
@@ -29,4 +29,8 @@ public class AccountHome extends BaseHome {
         return new AccountForm();
     }
 
+    @Override
+    public BasePage clickNewButton() {
+        return null;
+    }
 }
