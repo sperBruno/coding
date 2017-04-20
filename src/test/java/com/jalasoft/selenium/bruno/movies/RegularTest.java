@@ -1,13 +1,12 @@
 package com.jalasoft.selenium.bruno.movies;
 
-import com.jalasoft.selenium.bruno.Constants;
 import org.junit.Before;
 import org.junit.Test;
 
 import static com.jalasoft.selenium.bruno.Constants.DELTA;
-import static com.jalasoft.selenium.bruno.Constants.NINE;
-import static com.jalasoft.selenium.bruno.Constants.ONE;
 import static com.jalasoft.selenium.bruno.Constants.THREE;
+import static com.jalasoft.selenium.bruno.Constants.ONE;
+import static com.jalasoft.selenium.bruno.Constants.NINE;
 import static junit.framework.TestCase.assertEquals;
 
 /**
@@ -21,7 +20,7 @@ public class RegularTest {
      */
     @Before
     public void setUp() {
-        movie = new NewRelease("Rocky I", Constants.TWO);
+        movie = new NewRelease("Rocky I");
     }
 
     /**

@@ -9,10 +9,9 @@ public class Regular extends Movie {
      * This method is the constructo of a reagular movie.
      *
      * @param titleMovie of aregular movie.
-     * @param priceCode of a movie
      */
-    public Regular(final String titleMovie, final int priceCode) {
-        super(titleMovie, priceCode);
+    public Regular(final String titleMovie) {
+        super(titleMovie);
     }
 
     /**

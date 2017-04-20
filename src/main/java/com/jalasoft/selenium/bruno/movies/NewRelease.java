@@ -9,10 +9,9 @@ public class NewRelease extends Movie {
      * This is the constructor of a new release movie.
      *
      * @param titleMovie of a new release movie.
-     * @param priceCode of a movie
      */
-    public NewRelease(final String titleMovie, final int priceCode) {
-        super(titleMovie, priceCode);
+    public NewRelease(final String titleMovie) {
+        super(titleMovie);
     }
 
     /**

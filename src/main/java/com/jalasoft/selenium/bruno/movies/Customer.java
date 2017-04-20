@@ -48,13 +48,13 @@ class Customer {
     public String statement() {
 
         StringBuilder result = new StringBuilder();
-        result.append("Rental Record for " + getName() + BRAKE_LINE);
+        result.append("Rental Record for ").append(getName()).append(BRAKE_LINE);
         for (Rental rentals : rentalList) {
-            result.append(TABULATION + rentals.getMovie().getTitle() + TABULATION);
+            result.append(TABULATION).append(rentals.getMovie().getTitle()).append(TABULATION);
         }
-        result.append("Amount owed is " + String.valueOf(calculateTotalAmount())).append(BRAKE_LINE);
+        result.append("Amount owed is ").append(calculateTotalAmount()).append(BRAKE_LINE);
         result.append(BRAKE_LINE);
-        result.append("You earned " + String.valueOf(calculateTotalFrequentRentalPoints())).append(BRAKE_LINE);
+        result.append("You earned ").append(calculateTotalFrequentRentalPoints()).append(BRAKE_LINE);
         result.append(" frequent renter points");
         return result.toString();
     }
@@ -69,9 +69,7 @@ class Customer {
     public int getFrequentRenterPoints(final int frequentRenterPoints, final Rental rentals) {
         int count = frequentRenterPoints;
         count++;
-        if ((rentals.getMovie().getPriceCode() == 1)
-                &&
-                rentals.getDaysRented() > 1) {
+        if (rentals.getDaysRented() > 1) {
             count++;
         }
         return count;

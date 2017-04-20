@@ -20,7 +20,7 @@ public class NewReleaseTest {
      */
     @Before
     public void setUp() {
-        movie = new NewRelease("Batman", 2);
+        movie = new NewRelease("Batman");
     }
 
     /**

@@ -6,17 +6,14 @@ package com.jalasoft.selenium.bruno.movies;
 public abstract class Movie {
 
     private String titleMovie;
-    private int priceCode;
 
     /**
      * Contrucator of a movie.
      *
      * @param title     of a movie
-     * @param priceCode of a movie
      */
-    public Movie(final String title, final int priceCode) {
+    public Movie(final String title) {
         titleMovie = title;
-        this.priceCode = priceCode;
     }
 
     /**
@@ -27,23 +24,6 @@ public abstract class Movie {
      */
     public abstract double calculateMovieAmount(int daysRented);
 
-    /**
-     * This method gets the movie's price code.
-     *
-     * @return movie's price code.
-     */
-    public int getPriceCode() {
-        return priceCode;
-    }
-
-    /**
-     * This method sets the movie's price code.
-     *
-     * @param priceCode of a movie.
-     */
-    public void setPriceCode(final int priceCode) {
-        this.priceCode = priceCode;
-    }
 
     /**
      * this method get the title of a movie.

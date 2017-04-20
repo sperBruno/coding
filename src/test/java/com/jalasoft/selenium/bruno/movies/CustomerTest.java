@@ -4,7 +4,7 @@ import com.jalasoft.selenium.bruno.Constants;
 import org.junit.Test;
 
 import static com.jalasoft.selenium.bruno.Constants.THERTY;
-import static junit.framework.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 
 
 /**
@@ -19,9 +19,9 @@ public class CustomerTest {
     @Test
     public void testCustomerCanBeAddMovieInList() {
         Customer customer = new Customer("Juan");
-        customer.addRental(new Rental(new Regular("Rocky", Constants.TWO), THERTY));
-        customer.addRental(new Rental(new Regular("Rocky II", Constants.TWO), THERTY));
-        customer.addRental(new Rental(new NewRelease("Rocky III", Constants.TWO), THERTY));
+        customer.addRental(new Rental(new Regular("Rocky"), THERTY));
+        customer.addRental(new Rental(new Regular("Rocky II"), THERTY));
+        customer.addRental(new Rental(new NewRelease("Rocky III"), THERTY));
         final int expectedResult = Constants.THREE;
         assertEquals(expectedResult, customer.getRentalList().size());
     }
